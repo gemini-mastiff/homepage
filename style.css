@@ -103,3 +103,108 @@ video {
   font-size: 1rem;
   line-height: 1.5;
 }
+
+body {
+  background-color: var(--MAIN-COLOUR);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+img[src$=".svg"] {
+  width: 1.5rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.about-me,
+.projects-wrapper,
+.contact-me {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0 auto;
+}
+
+/* MAIN */
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 1.5rem;
+  margin: 0 auto;
+}
+
+.project-card {
+  position: relative;
+  border-radius: 1rem;
+  padding-bottom: 2rem;
+  box-shadow: 2px 3px 5px 0px #bcbcbc;
+}
+
+.project-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.8rem;
+}
+
+.project-links {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.8rem;
+}
+
+.project-image {
+  color: var(--MAIN-COLOUR);
+  background-color: #facc15;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem 1rem 0 0;
+  font-size: 1.3rem;
+}
+
+.project-image.two {
+  background-color: purple;
+}
+
+.project-image.three {
+  background-color: green;
+}
+
+.project-image.four {
+  background-color: var(--ACCENT-1);
+}
+
+.project-image.five {
+  background-color: orange;
+}
+
+.project-image.six {
+  background-color: grey;
+}
+
+@media only screen and (max-width: 1000px) {
+  .projects {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+@media only screen and (max-width: 700px) {
+  .projects {
+    grid-template-columns: repeat(1, 300px);
+  }
+}
