@@ -109,7 +109,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  padding: 2rem;
 }
 
 img[src$=".svg"] {
@@ -118,10 +117,12 @@ img[src$=".svg"] {
 
 h1 {
   font-size: 2.5rem;
+  font-weight: bold;
 }
 
 h2 {
   font-size: 2rem;
+  font-weight: bold;
 }
 
 h3 {
@@ -130,7 +131,7 @@ h3 {
 
 .about-me,
 .projects-wrapper,
-.contact-me {
+.footer-wrapper {
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -198,6 +199,50 @@ h3 {
   background-color: grey;
 }
 
+/* FOOTER */
+
+footer {
+  background-color: var(--ACCENT-1);
+}
+
+.footer-wrapper {
+  color: var(--MAIN-COLOUR);
+  flex-direction: row;
+}
+
+.footer-wrapper img[src$=".svg"] {
+  filter: invert(83%) sepia(63%) saturate(2%) hue-rotate(20deg) brightness(105%)
+    contrast(98%);
+}
+
+.contact-me {
+  padding: 1rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.contact {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.contact-links {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.footer-img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  margin: 1rem;
+}
+
 @media only screen and (max-width: 1000px) {
   .projects {
     grid-template-columns: repeat(2, 300px);
@@ -206,5 +251,9 @@ h3 {
 @media only screen and (max-width: 700px) {
   .projects {
     grid-template-columns: repeat(1, 300px);
+  }
+
+  .footer-wrapper {
+    flex-direction: column;
   }
 }
