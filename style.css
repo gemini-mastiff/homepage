@@ -1,3 +1,5 @@
+@import url(https://fonts.bunny.net/css?family=playfair-display:400,700|roboto-flex:400);
+
 html,
 body,
 div,
@@ -88,11 +90,6 @@ video {
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "Roboto Flex";
-  src: url(font/RobotoFlex-VariableFont_GRAD\XOPQ\XTRA\YOPQ\YTAS\YTDE\YTFI\YTLC\YTUC\opsz\slnt\wdth\wght.ttf);
-}
-
 :root {
   --MAIN-COLOUR: #fafaf9;
   --BG-COLOUR: #e5e7eb;
@@ -115,9 +112,15 @@ img[src$=".svg"] {
   width: 1.5rem;
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", sans-serif;
+}
+
 h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 3rem;
+  text-shadow: 1px 1px 2px #6d6d6d;
 }
 
 h2 {
@@ -129,7 +132,6 @@ h3 {
   font-size: 1.5rem;
 }
 
-.about-me,
 .projects-wrapper,
 .footer-wrapper {
   width: fit-content;
@@ -140,6 +142,75 @@ h3 {
 }
 
 /* SECTION */
+
+section {
+  position: relative;
+  margin-top: 3rem;
+}
+
+.diagonal-box {
+  position: absolute;
+  top: -130%;
+  z-index: -1;
+  background-color: var(--ACCENT-1);
+  height: 200%;
+  width: 120vw;
+  transform: skewY(-11deg);
+}
+
+.about-me-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 0;
+  width: 90%;
+}
+
+.header-img-wrapper {
+  position: relative;
+  width: fit-content;
+}
+
+.header-img {
+  z-index: 1;
+  height: 400px;
+  width: 325px;
+  object-fit: cover;
+  box-shadow: 2px 3px 5px 0px #6d6d6d;
+}
+
+.header-img-wrapper > h1 {
+  position: absolute;
+  z-index: 2;
+  color: var(--MAIN-COLOUR);
+  bottom: 0.2rem;
+  left: 3.5rem;
+}
+
+.about-me {
+  max-width: 66ch;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--MAIN-COLOUR);
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0 1rem 1rem 0;
+  box-shadow: 2px 3px 5px 0px #6d6d6d;
+}
+
+.about-me > h2 {
+  font-size: 2.5rem;
+}
+
+.header-links,
+.project-links {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto;
+  margin-right: 0.5rem;
+}
 
 /* MAIN */
 
@@ -152,7 +223,7 @@ h3 {
 
 .project-card {
   border-radius: 1rem;
-  box-shadow: 2px 3px 5px 0px #bcbcbc;
+  box-shadow: 2px 3px 5px 0px #6d6d6d;
 }
 
 .project-desc {
@@ -160,11 +231,6 @@ h3 {
   flex-direction: column;
   gap: 0.5rem;
   padding: 0.8rem;
-}
-
-.project-links {
-  margin-left: auto;
-  margin-right: 0.5rem;
 }
 
 .project-image {
@@ -207,6 +273,7 @@ footer {
 .footer-wrapper {
   color: var(--MAIN-COLOUR);
   flex-direction: row;
+  margin-top: 1rem;
 }
 
 .footer-wrapper img[src$=".svg"] {
